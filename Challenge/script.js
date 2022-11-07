@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
   var passLength = parseInt(window.prompt("How long do you want the password? Only 8-128 characters"))
  
-  //if cancels or less than 8 or more than 128
+//if cancels or less than 8 or more than 128
   if (passLength === null){
     return; 
   } 
@@ -36,47 +36,34 @@ function generatePassword(){
   var optionsCart = []
 
   if (numbersPrompt === true){
-    optionsCart.push(numbersList)
+    var optionsCart = optionsCart.concat(numbersList)
   }
   if (symbolsPrompt === true){
-    optionsCart.push(symbolsList)
+    var optionsCart = optionsCart.concat(symbolsList)
   }
   if (upperCasePrompt === true){
-    optionsCart.push(uppercaseList)
+    var optionsCart = optionsCart.concat(uppercaseList)
   }
   if (lowerCasePrompt === true){
-    optionsCart.push(lowercaseList)
+    var optionsCart = optionsCart.concat(lowercaseList)
   }
   if (optionsCart.length === 0) {
-    optionsCart.push(lowercaseList)
+    var optionsCart = optionsCart.concat(lowercaseList)
   }
-// console.lo optionsCart)
-var generatedPassword = " "
-//create random integers
-function randomInt(min, max){
-  if (!max){
-    max = min
-    min = 0
+// randomly create password using Math random
+var generatedPassword = []
+  for (var i = 0; i < passLength; i++){
+    var index=(Math.floor(Math.random()*(optionsCart.length-1)))
+    var pass = optionsCart[index]
+    generatedPassword.push(pass)
   }
-  var rand = Math.random()
-  return Math.floor(min*(1-rand) +rand*max)
-}
+  //take away the commas using join
+  generatedPassword = generatedPassword.join('')
 
-function getRandomItem(list){
-  return list[randomInt(list.length)]
-}
-
-
-  for (var i = 0; i < passwordLength; i++){
-    var randomList = getRandomItem(optionsCart)
-    var randomChar = getRandomItem(randomList) 
-    generatedPassword += randomChar
-  }
-  
   return generatedPassword
 
 }
-
+ 
 
 // Write password to the #password input
 function writePassword() {
