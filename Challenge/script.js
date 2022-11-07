@@ -33,28 +33,28 @@ function generatePassword(){
   var symbolsList = symbols.split('')
 
   //add array together
-  var optionsCart = []
+  var passArray = []
 
   if (numbersPrompt === true){
-    var optionsCart = optionsCart.concat(numbersList)
+    var passArray = passArray.concat(numbersList)
   }
   if (symbolsPrompt === true){
-    var optionsCart = optionsCart.concat(symbolsList)
+    var passArray = passArray.concat(symbolsList)
   }
   if (upperCasePrompt === true){
-    var optionsCart = optionsCart.concat(uppercaseList)
+    var passArray = passArray.concat(uppercaseList)
   }
   if (lowerCasePrompt === true){
-    var optionsCart = optionsCart.concat(lowercaseList)
+    var passArray = passArray.concat(lowercaseList)
   }
-  if (optionsCart.length === 0) {
-    var optionsCart = optionsCart.concat(lowercaseList)
+  if (passArray.length === 0) {
+    var passArray = passArray.concat(lowercaseList)
   }
 // randomly create password using Math random
 var generatedPassword = []
   for (var i = 0; i < passLength; i++){
-    var index=(Math.floor(Math.random()*(optionsCart.length-1)))
-    var pass = optionsCart[index]
+    var index=(Math.floor(Math.random()*(passArray.length-1)))
+    var pass = passArray[index]
     generatedPassword.push(pass)
   }
   //take away the commas using join
