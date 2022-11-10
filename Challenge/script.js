@@ -30,6 +30,8 @@ function generatePassword() {
   var upperCase = lowerCase.toUpperCase()
   var numbers = "1234567890"
   var symbols = "!@#$%^&*()_+-=<>?:;',./"
+  
+  //split to create
   var lowercaseList = lowerCase.split('')
   var uppercaseList = upperCase.split('')
   var numbersList = numbers.split('')
