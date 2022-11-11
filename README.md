@@ -14,13 +14,13 @@ open website
 ![alt text](./images/Password-Generator.png)
 
 click on the Generate Password button and the following will pop-up.
-![alt text](./images/rypab4_github_io_says_and_Password_Generator.png
+![alt text](./images/rypab4_github_io_says_and_Password_Generator.png)
 
 Add a number or else the following window will show:
-![alt text](./images/rypab4_github_io_says_and_Password_Generator-2.png
+![alt text](./images/rypab4_github_io_says_and_Password_Generator-2.png)
 
 After a number is entered a series of questions for the criteria of the passwords pop-up and OK means Yes and Cancel means No:
-![alt text](./images/rypab4_github_io_says_and_Password_Generator-3.png
+![alt text](./images/rypab4_github_io_says_and_Password_Generator-3.png)
 
 After all the questions a password is given in the box:
-![alt text](./images/Password_Generator_done.png
+![alt text](./images/Password_Generator_done.png)
